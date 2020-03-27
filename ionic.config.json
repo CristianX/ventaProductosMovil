@@ -1,5 +1,7 @@
 {
   "name": "ventaProductos",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
