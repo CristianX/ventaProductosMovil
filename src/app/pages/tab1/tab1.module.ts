@@ -4,13 +4,19 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Tab1Page } from './tab1.page';
+import { VendedoresPage } from '../vendedores/vendedores.page';
+import { VendedoresPageModule } from '../vendedores/vendedores.module';
 
 
 @NgModule({
+  entryComponents: [
+    VendedoresPage
+  ],
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
+    VendedoresPageModule,
     RouterModule.forChild([{ path: '', component: Tab1Page }])
   ],
   declarations: [Tab1Page]

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { VendedoresPage } from '../vendedores/vendedores.page';
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +9,19 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  constructor( private modalCtrl: ModalController ) {}
+
+
+  async abrirVendedores() {
+    const modal = await this.modalCtrl.create({
+      component: VendedoresPage,
+      componentProps: {
+        nombre: 'Nombre Vendedor',
+        pais: 'Ecuador'
+      }
+    });
+
+    await modal.present();
+  }
 
 }
